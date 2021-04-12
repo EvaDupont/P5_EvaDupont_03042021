@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css"> 
+        <script type ="text/javascript" src="app.js"></script> 
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/d461de9a6d.js" crossorigin="anonymous"></script> <!-- lien FA si besoin-->
+        <meta name= "viewport" content="width=device-width, initial-scale=1.0"> <!-- balise pour controler la mise en page mobile -->
+        <meta name= "description" content=" Bienvenue chez Orinoco : vous trouverez ici les meilleures références d'ours en peluche faits à la maison."> <!-- balise pour l'indexation dans les moteurs de recherche -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="icon" type="image/png" href="images/logo.png" />
+        <title> Mon panier </title>
+    </head>
+
+    <body>
+        <header>
+            <div class="container-header">
+                <div class="logo">
+                    <a href="index.html">
+                    <img class="logo-orinoco" src="images/logo.png" alt="logo">
+                    </a>
+                </div>
+
+                <nav>
+                    <ul class="navigation">
+                        <li><i class="far fa-user user"></i> Mon espace </li>
+                    </ul>
+                </nav>
+
+                <nav>
+                    <ul class="nav-mobile">
+                        <li><i class="far fa-user user fa-lg"></i></li>
+                    </ul> 
+                </nav>
+
+            </div>
+        </header>
+
+        <main>
+            <div class="col">
+                <div class="card-panier">
+                    <div class="card-body">
+                       <h5 class="card-title">Mon panier</h5>
+                       <p class="card-text">description </p>
+                       <div class="btn-supprimer"><i class="fas fa-times btn-suppr"></i> Supprimer</div>
+                    </div>
+
+                    <!-- OU -->
+                    <form>
+                        <label for="panier"> Mon panier :</label>
+                        <textarea id="panier" name="panier"></textarea> <!-- revoir les id si version conservée-->
+                        <input type="reset" value="Supprimer" class="btn-supprimer">
+                    </form>
+                </div>
+            </div>
+
+            <div id="price-final">Montant total de votre panier :</div>
+
+            <div class="btn-continueAchat"><a href="index.html"><i class="fas fa-shopping-cart"></i> Continuer mes achats </a></div>
+
+            <div class="col">
+                <div class="card-panier">
+                    <div class="card-body">
+                       <h5 class="card-title">Informations personnelles</h5>
+
+                       <form>
+                        <div>
+                            <label for="firstName"> Prénom </label>
+                            <input type="text" name="firstName" id="firstName" class="form-control" required />
+                        </div>
+
+                        <div>
+                            <label for="lastName"> Nom </label>
+                            <input type="text" name="lastName" id="lastName" class="form-control" required />
+                        </div>
+
+                        <div>
+                            <label for="address"> Adresse </label>
+                            <textarea id="address" class="form-control" required></textarea>
+                        </div>
+
+                        <div>
+                            <label for="city"> Ville </label>
+                            <input type="text" name="city" id="city" class="form-control" required />
+                        </div>
+    
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" class="form-control"  required />
+                        </div>
+    
+                        <button class="btn-commande" type="submit"><i class="fas fa-check btn-check"></i>Commander</button>
+                    
+                    </form>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer >
+            <ul> 
+                <li> <a href = "#" ></a><i class="fas fa-landmark landmark"></i> Mentions légales </li>
+                <li> <a href = "#" ></a><i class="fas fa-user-lock lock"></i> Protection des données personnelles</li>
+                <li> <a href = "mailto:hello-orinoco@gmail.com"><i class="fas fa-at at"></i> Restons en contact </a></li> <!--faire lien vers BM ou RS -->
+            </ul>
+        </footer>
+
+
+
+
+
+
+    </body>
+
+</html>

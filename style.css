@@ -1,0 +1,325 @@
+body {
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a, a:visited, a:active, a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.main-title {
+  font-size: 2em;
+  font-style: italic;
+  text-align: center;
+  color: rgba(153, 103, 10, 0.979);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.final-teddy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 100px;
+}
+
+#price-final {
+  font-weight: bold;
+  color: rgba(153, 103, 10, 0.979);
+  text-decoration: underline;
+  border: none;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#price-final:focus {
+  outline-style: none;
+}
+
+/* cartes page index */
+.card {
+  width: 300px;
+  height: 200px;
+  margin-bottom: 50px;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 500ms ease-out 50ms;
+  transition: -webkit-transform 500ms ease-out 50ms;
+  transition: transform 500ms ease-out 50ms;
+  transition: transform 500ms ease-out 50ms, -webkit-transform 500ms ease-out 50ms;
+  -webkit-box-shadow: 10px 5px 5px #dcc9dc;
+          box-shadow: 10px 5px 5px #dcc9dc;
+}
+
+/* carte page produit */
+.card-teddy {
+  width: 500px;
+  height: 300px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.img-teddy {
+  width: 400px;
+  height: 280px;
+  border-radius: 20px;
+  border: solid 5px #c8aac8;
+}
+
+/* carte page panier */
+.card-panier {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  border: solid 3px #c8aac8;
+}
+
+/*bouton mettre dans le panier */
+.btn-paw, .btn-check, .btn-suppr {
+  padding: 5px;
+}
+
+.btn-panier {
+  background-color: #f0e8f0;
+  border-radius: 20px;
+  padding: 10px;
+  border: none;
+  outline-style: none;
+  width: 200px;
+  height: 60px;
+  border: solid 5px #c8aac8;
+}
+
+.btn-panier:focus {
+  outline-style: none;
+}
+
+.btn-panier:active {
+  background-color: #c8aac8;
+  -webkit-box-shadow: 5px 5px 5px #dcc9dc;
+          box-shadow: 5px 5px 5px #dcc9dc;
+  border: none;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  outline-style: none;
+  border: solid 5px #f0e8f0;
+}
+
+/* bouton poursuivre mes achats */
+.btn-continueAchat {
+  background-color: #c8aac8;
+  border-radius: 20px;
+  padding: 10px;
+  border: none;
+  outline-style: none;
+  margin: auto;
+  width: 210px;
+  border: solid 5px #f0e8f0;
+}
+
+.btn-continueAchat:focus {
+  outline-style: none;
+}
+
+.btn-continueAchat:active {
+  background-color: #f0e8f0;
+  -webkit-box-shadow: 5px 5px 5px #dcc9dc;
+          box-shadow: 5px 5px 5px #dcc9dc;
+  border: none;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  outline-style: none;
+  border: solid 5px #c8aac8;
+}
+
+/* bouton commander */
+.btn-commande {
+  background-color: #f0e8f0;
+  border-radius: 20px;
+  padding: 5px;
+  border: none;
+  outline-style: none;
+  width: 150px;
+  height: 60px;
+  border: solid 5px #c8aac8;
+  margin: auto;
+  margin-top: 30px;
+  display: block;
+}
+
+.btn-commande:focus {
+  outline-style: none;
+}
+
+.btn-commande:active {
+  background-color: #c8aac8;
+  -webkit-box-shadow: 5px 5px 5px #dcc9dc;
+          box-shadow: 5px 5px 5px #dcc9dc;
+  border: none;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  outline-style: none;
+  border: solid 5px #f0e8f0;
+}
+
+/* bouton supprimer */
+.btn-supprimer {
+  background-color: rgba(153, 103, 10, 0.979);
+  border-radius: 20px;
+  border: none;
+  outline-style: none;
+  padding: 5px;
+  width: 130px;
+  height: 45px;
+  border: solid 5px rgba(105, 71, 7, 0.979);
+  margin: auto;
+  display: block;
+  color: cornsilk;
+  cursor: pointer;
+}
+
+.btn-supprimer:focus {
+  outline-style: none;
+}
+
+.btn-supprimer:active {
+  background-color: rgba(105, 71, 7, 0.979);
+  -webkit-box-shadow: 5px 5px 5px #dcc9dc;
+          box-shadow: 5px 5px 5px #dcc9dc;
+  border: none;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  outline-style: none;
+  border: solid 5px rgba(153, 103, 10, 0.979);
+}
+
+.container-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.logo {
+  margin: auto;
+  text-align: center;
+}
+
+.logo-orinoco {
+  width: 200px;
+  height: auto;
+  border-radius: 110px;
+  padding-top: 10px;
+  position: relative;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  position: absolute;
+  right: 20px;
+}
+
+.navigation li {
+  text-decoration: none;
+  padding-right: 15px;
+  padding-top: 20px;
+}
+
+.nav-mobile {
+  display: none;
+}
+
+.user, .basket {
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .navigation {
+    display: none;
+  }
+  .nav-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    position: absolute;
+    right: -10px;
+  }
+  .nav-mobile li {
+    text-decoration: none;
+    padding-right: 15px;
+    padding-top: 20px;
+  }
+  header img {
+    width: 150px;
+    height: auto;
+    position: relative;
+  }
+  .logo {
+    margin: auto;
+    left: 20px;
+  }
+}
+
+footer {
+  background-color: #f0e8f0;
+  border-radius: 20px 20px 0px 0px;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+  padding: 20px;
+}
+
+footer ul li {
+  padding: 10px;
+}
+
+footer ul a {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+
+.landmark, .at {
+  padding-right: 10px;
+}
+
+.lock {
+  padding-right: 6px;
+}
+
+@media screen and (max-width: 1023px) {
+  ul {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=style.css.map */

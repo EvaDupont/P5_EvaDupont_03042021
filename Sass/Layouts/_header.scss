@@ -1,0 +1,77 @@
+.container-header
+{
+    display: flex;
+}
+
+.logo
+{
+    margin: auto;
+    text-align: center;
+}
+.logo-orinoco
+{
+    width: 200px;
+    height: auto;
+    border-radius: 110px;
+    padding-top: 10px;
+    position: relative;
+}
+
+.navigation
+{
+    display: flex;
+    list-style : none;
+    position: absolute;
+    right : 20px;
+    li 
+    {
+    text-decoration: none;
+    padding-right: 15px;
+    padding-top: 20px;
+    }
+}
+
+.nav-mobile
+    {
+        display: none;
+    }
+
+.user, .basket
+{
+    padding-right: 10px;
+}
+
+
+@media screen and (max-width : 767px)
+{
+    .navigation
+    {
+        display: none;
+    }
+    .nav-mobile
+    {
+        display: flex;
+        list-style : none;
+        position: absolute;
+        right : -10px;
+        li 
+        {
+        text-decoration: none;
+        padding-right: 15px;
+        padding-top: 20px;
+        }
+    }
+    
+    header img
+    {
+    width: 150px;
+    height: auto;
+    position: relative;
+    }
+
+    .logo
+    {
+    margin: auto;
+    left : 20px;
+    }
+}

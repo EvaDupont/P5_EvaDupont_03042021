@@ -1,0 +1,122 @@
+/*bouton mettre dans le panier */
+.btn-paw, .btn-check, .btn-suppr
+{
+    padding: 5px;
+}
+
+.btn-panier
+{
+    background-color: $background-color;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    outline-style: none;
+    width: 200px;
+    height: 60px;
+    border: solid 5px $darken-background;
+    &:focus
+    {
+        outline-style: none;
+    }
+}
+
+.btn-panier:active
+{
+    background-color: $darken-background;
+    box-shadow: 5px 5px 5px $box-shadow;
+    border: none;
+    transform: scale(0.9);
+    outline-style: none;
+    border: solid 5px $background-color;
+}
+
+/* bouton poursuivre mes achats */
+
+.btn-continueAchat
+{
+    background-color: $darken-background;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    outline-style: none;
+    margin :auto;
+    width: 210px;
+    border: solid 5px $background-color;
+    &:focus
+    {
+        outline-style: none;
+    }
+}
+
+.btn-continueAchat:active, 
+{
+    background-color: $background-color;
+    box-shadow: 5px 5px 5px $box-shadow;
+    border: none;
+    transform: scale(0.9);
+    outline-style: none;
+    border: solid 5px $darken-background;
+}
+
+/* bouton commander */
+
+.btn-commande
+{
+    background-color: $background-color;
+    border-radius: 20px;
+    padding: 5px;
+    border: none;
+    outline-style: none;
+    width: 150px;
+    height: 60px;
+    border: solid 5px $darken-background;
+    margin :auto;
+    margin-top: 30px;
+    display: block;
+    &:focus
+    {
+        outline-style: none;
+    }
+}
+
+.btn-commande:active
+{
+    background-color: $darken-background;
+    box-shadow: 5px 5px 5px $box-shadow;
+    border: none;
+    transform: scale(0.9);
+    outline-style: none;
+    border: solid 5px $background-color;
+}
+
+/* bouton supprimer */
+
+.btn-supprimer
+{
+    background-color: $text-color;
+    border-radius: 20px;
+    border: none;
+    outline-style: none;
+    padding: 5px;
+    width: 130px;
+    height: 45px;
+    border: solid 5px $darken-textcolor;
+    margin :auto;
+    display: block;
+    color: $lighten-text;
+    cursor: pointer;
+    &:focus
+    {
+        outline-style: none;
+    }
+}
+
+.btn-supprimer:active
+{
+    background-color: $darken-textcolor;
+    box-shadow: 5px 5px 5px $box-shadow;
+    border: none;
+    transform: scale(0.9);
+    outline-style: none;
+    border: solid 5px $text-color;
+}
