@@ -2,15 +2,14 @@
 <html lang="fr-FR">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css"> 
-        <script type ="text/javascript" src="app.js"></script> 
+        <link rel="stylesheet" href="style.css">  
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/d461de9a6d.js" crossorigin="anonymous"></script> <!-- lien FA si besoin-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <meta name= "viewport" content="width=device-width, initial-scale=1.0"> <!-- balise pour controler la mise en page mobile -->
         <meta name= "description" content=" Bienvenue chez Orinoco : vous trouverez ici les meilleures références d'ours en peluche faits à la maison."> <!-- balise pour l'indexation dans les moteurs de recherche -->
         <link rel="icon" type="image/png" href="images/logo.png" />
-        <title> A DEFINIR  </title>
+        <title> Nos produits </title>
     </head>
 
     <body>
@@ -38,54 +37,19 @@
         </header>
 
         <main>
-            <div class="container">
-                <div class ="row">
-                
-                <div class="col">
-                <div class="card-teddy">
-                    <img class="img-teddy" src="teddy_1.jpg" alt="Norbert"> <!--test image opur page produit-->
+            <section id="detailProduit">
+                <div id="detailOption">
+                    <p>Choisissez votre couleur :</p>
+                        <select name="option" id="choix_option" required aria-invalid="false">
+                            <option disabled value="" selected>Couleurs</option>
+                        </select> 
                 </div>
-                </div>
-    
-                <div class="col">
-                <div class="card-teddy">
-                    <div class="card-body">
-                       <h5 class="card-title">Titre</h5>
-                       <p class="card-text">description </p>
-                    
-                       <form>
-                        <label for="colors"> Choisissez votre couleur : </label>
-                        <select id="colors" onchange="myfunction()">
-                            <option value="21" selected>1</option>
-                            <option value="22">2</option>
-                            <option value="23">3</option>
-                            <option value="23">4</option>
-                        </select>
-                       </form>
+            </section>
 
-                       <form>
-                        <label for="quantity"> Quantité : </label>
-                        <select id="quantity" onchange="quantity()"> <!--changer nom fonction + ID-->
-                            <option value="1" selected>1</option> <!-- changer nom value-->
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>
-                       </form>
+            <section class="panier">
+                <div class="btn-panier"><a href="panier.html"><i class="fas fa-paw fa-lg btn-paw"></i> Ajouter au panier</a></div>
+            </section>
 
-                       <div class="final-teddy">
-                            <div id="price-final">Total :</div>
-                            <div class="btn-panier"><a href="panier.html"><i class="fas fa-paw fa-lg btn-paw"></i> Ajouter au panier</a></div>
-                       </div>
-                        
-                    </div>
-                </div>
-                </div>
-
-                </div>
-            </div>
-
-            
         </main>
 
         <footer >
@@ -96,6 +60,16 @@
                 </ul>
         </footer>
 
+        <script type ="text/javascript" src="app.js"></script>
+        <script>
+            detailTeddies();
+        </script>
+       <!-- <script>
+            ajoutPanier();
+        </script>
+        <script>
+            nombreProduitPanier();
+        </script>-->
     </body>
 </html>
  

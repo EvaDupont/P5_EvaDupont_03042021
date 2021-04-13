@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css"> 
-        <script type ="text/javascript" src="index.js"></script> 
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/d461de9a6d.js" crossorigin="anonymous"></script> <!-- lien FA si besoin-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -37,30 +36,12 @@
         </header>
 
         <main>
-            <h1 class="main-title"> Découvrez et choisissez vos ours en peluche faits à la main</h1>
+            <section>
+                <h1 class= "main-title"> Découvrez et choisissez vos ours en peluche faits à la main </h1> 
+            </section>
 
-        <div class="container">
-            <div class ="row">
-            
-            <div class="col">
-            <div class="card">
-                <a class="link-card" href="produits.html">
-                    <img class="card-img-top" id="imageUrl" src="http://localhost:3000/images/teddy_1.jp" alt="photo ourson" >
-                
-                    <div class="card-body">
-                        <h5 id="name"></h5>
-                        <p id="description"></p>
-                        <p id="price"> </p>
-                    </div>
-                </a>    
-            </div>
-            </div>
-
-            </div>
-        </div>
-        <h5 id="name"> test</h5>
-        <p id="description">test</p>
-        <p id="price"> test </p>
+            <section class="liste_produit" id="listeProduit">
+            </section>
 
         </main>
 
@@ -72,6 +53,13 @@
                 </ul>
         </footer>
 
+        <script type ="text/javascript" src="app.js"></script> 
+        <script> 
+            loadTeddies();  /* appeler la fonction */
+        </script>
+        <script>
+            nombreIndexPanier(); /*appeler la fonction */
+        </script>
     </body>
 </html>
  

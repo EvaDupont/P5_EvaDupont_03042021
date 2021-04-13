@@ -1,18 +1,26 @@
-body
+body, main
 {
     font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-a, a:visited, a:active, a:hover
+.liste_produit a
 {
     text-decoration:none;
-    color: $text;
-    
+    color: $text-color;
+    border : solid 4px $darken-background;
+    background-color: $background-color;
+    border-radius: 10px;
+    padding: 10px;
+    width : 200px;
+    margin-left: 5px;
+    &:hover
+    {
+        color: $text-color;
+        font-weight: bold;
+    }
 }
-
-
 
 .main-title /* Titre pcpal de la page index*/
 {
@@ -26,12 +34,6 @@ a, a:visited, a:active, a:hover
     margin-left: 20px;
 }
 
-.final-teddy /* dans les pages produits : bloc flex pour prix et btn */
-{
-  display: flex;
-  justify-content: space-around;
-  margin-top: 100px;
-}
 
 #price-final /*dans les pages produits + panier : calcul du panier total */
 {

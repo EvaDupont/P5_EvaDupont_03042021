@@ -1,12 +1,23 @@
-body {
+body, main {
   font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-a, a:visited, a:active, a:hover {
+.liste_produit a {
   text-decoration: none;
-  color: black;
+  color: rgba(153, 103, 10, 0.979);
+  border: solid 4px #c8aac8;
+  background-color: #f0e8f0;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  margin-left: 5px;
+}
+
+.liste_produit a:hover {
+  color: rgba(153, 103, 10, 0.979);
+  font-weight: bold;
 }
 
 .main-title {
@@ -18,15 +29,6 @@ a, a:visited, a:active, a:hover {
   padding-bottom: 50px;
   margin-right: 20px;
   margin-left: 20px;
-}
-
-.final-teddy {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-top: 100px;
 }
 
 #price-final {
@@ -44,13 +46,27 @@ a, a:visited, a:active, a:hover {
 }
 
 /* cartes page index */
-.card {
-  width: 300px;
-  height: 200px;
+#listeProduit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.produit_card {
+  border: solid 3px #f0e8f0;
+  width: 460px;
+  height: 530px;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 5px #dcc9dc;
+          box-shadow: 5px 5px 5px #dcc9dc;
+  margin: auto;
+  margin-top: 50px;
   margin-bottom: 50px;
 }
 
-.card:hover {
+.produit_card:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: -webkit-transform 500ms ease-out 50ms;
@@ -61,21 +77,69 @@ a, a:visited, a:active, a:hover {
           box-shadow: 10px 5px 5px #dcc9dc;
 }
 
+img {
+  width: 455Px;
+  height: 250px;
+  border-radius: 17px;
+}
+
+.produit_nom, .detail_nom {
+  color: rgba(153, 103, 10, 0.979);
+  text-align: center;
+  padding-top: 5px;
+  margin: 20px;
+}
+
+.produit_description, .produit_prix {
+  text-align: justify;
+  padding: 5px;
+}
+
+.detail_description {
+  text-align: center;
+  font-style: italic;
+}
+
 /* carte page produit */
-.card-teddy {
-  width: 500px;
-  height: 300px;
+#detailProduit {
   margin-top: 50px;
-  margin-bottom: 50px;
 }
 
-.img-teddy {
-  width: 400px;
-  height: 280px;
+.detail_illustration {
   border-radius: 20px;
-  border: solid 5px #c8aac8;
+  border: solid rgba(153, 103, 10, 0.979) 6px;
+  width: 467px;
+  margin: auto;
 }
 
+#detailOption {
+  margin-bottom: 100px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.detail_prix {
+  font-weight: bold;
+  color: rgba(153, 103, 10, 0.979);
+  text-align: center;
+}
+
+/*
+.card-teddy
+{
+    width : 500px;
+    height: 300px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.img-teddy
+{
+    width: 400px;
+    height: 280px;
+    border-radius: 20px;
+    border: solid 5px $darken-background;
+}*/
 /* carte page panier */
 .card-panier {
   margin-top: 50px;
@@ -97,10 +161,19 @@ a, a:visited, a:active, a:hover {
   width: 200px;
   height: 60px;
   border: solid 5px #c8aac8;
+  margin: auto;
+  margin-bottom: 50px;
 }
 
-.btn-panier:focus {
-  outline-style: none;
+.btn-panier a {
+  text-decoration: none;
+  cursor: pointer;
+  color: rgba(153, 103, 10, 0.979);
+}
+
+.btn-panier a:hover {
+  color: rgba(153, 103, 10, 0.979);
+  font-weight: bold;
 }
 
 .btn-panier:active {
@@ -116,18 +189,25 @@ a, a:visited, a:active, a:hover {
 
 /* bouton poursuivre mes achats */
 .btn-continueAchat {
-  background-color: #c8aac8;
+  background-color: #f0e8f0;
   border-radius: 20px;
   padding: 10px;
   border: none;
   outline-style: none;
   margin: auto;
-  width: 210px;
-  border: solid 5px #f0e8f0;
+  width: 220px;
+  border: solid 5px #c8aac8;
 }
 
-.btn-continueAchat:focus {
-  outline-style: none;
+.btn-continueAchat a {
+  text-decoration: none;
+  cursor: pointer;
+  color: rgba(153, 103, 10, 0.979);
+}
+
+.btn-continueAchat a:hover {
+  color: rgba(153, 103, 10, 0.979);
+  font-weight: bold;
 }
 
 .btn-continueAchat:active {
@@ -156,8 +236,15 @@ a, a:visited, a:active, a:hover {
   display: block;
 }
 
-.btn-commande:focus {
-  outline-style: none;
+.btn-commande a {
+  text-decoration: none;
+  cursor: pointer;
+  color: rgba(153, 103, 10, 0.979);
+}
+
+.btn-commande a:hover {
+  color: rgba(153, 103, 10, 0.979);
+  font-weight: bold;
 }
 
 .btn-commande:active {
@@ -187,8 +274,15 @@ a, a:visited, a:active, a:hover {
   cursor: pointer;
 }
 
-.btn-supprimer:focus {
-  outline-style: none;
+.btn-supprimer a {
+  text-decoration: none;
+  cursor: pointer;
+  color: rgba(153, 103, 10, 0.979);
+}
+
+.btn-supprimer a:hover {
+  color: rgba(153, 103, 10, 0.979);
+  font-weight: bold;
 }
 
 .btn-supprimer:active {
@@ -234,6 +328,16 @@ a, a:visited, a:active, a:hover {
   text-decoration: none;
   padding-right: 15px;
   padding-top: 20px;
+}
+
+.navigation a {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+
+.navigation a:hover {
+  color: rgba(153, 103, 10, 0.979);
 }
 
 .nav-mobile {
@@ -295,6 +399,10 @@ footer ul a {
   text-decoration: none;
   cursor: pointer;
   color: black;
+}
+
+footer ul a:hover {
+  color: rgba(153, 103, 10, 0.979);
 }
 
 .landmark, .at {

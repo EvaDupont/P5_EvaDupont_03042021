@@ -14,9 +14,18 @@
     width: 200px;
     height: 60px;
     border: solid 5px $darken-background;
-    &:focus
+    margin: auto;
+    margin-bottom: 50px;
+    a
     {
-        outline-style: none;
+        text-decoration: none;
+        cursor: pointer;
+        color: $text-color;
+            &:hover
+            {
+                color: $text-color;
+                font-weight: bold;
+            }
     }
 }
 
@@ -34,21 +43,28 @@
 
 .btn-continueAchat
 {
-    background-color: $darken-background;
+    background-color: $background-color;
     border-radius: 20px;
     padding: 10px;
     border: none;
     outline-style: none;
     margin :auto;
-    width: 210px;
-    border: solid 5px $background-color;
-    &:focus
+    width: 220px;
+    border: solid 5px $darken-background;
+    a
     {
-        outline-style: none;
+        text-decoration: none;
+        cursor: pointer;
+        color: $text-color;
+            &:hover
+            {
+                color: $text-color;
+                font-weight: bold;
+            }
     }
 }
 
-.btn-continueAchat:active, 
+.btn-continueAchat:active
 {
     background-color: $background-color;
     box-shadow: 5px 5px 5px $box-shadow;
@@ -73,9 +89,16 @@
     margin :auto;
     margin-top: 30px;
     display: block;
-    &:focus
+    a
     {
-        outline-style: none;
+        text-decoration: none;
+        cursor: pointer;
+        color: $text-color;
+            &:hover
+            {
+                color: $text-color;
+                font-weight: bold;
+            }
     }
 }
 
@@ -105,9 +128,16 @@
     display: block;
     color: $lighten-text;
     cursor: pointer;
-    &:focus
+    a
     {
-        outline-style: none;
+        text-decoration: none;
+        cursor: pointer;
+        color: $text-color;
+            &:hover
+            {
+                color: $text-color;
+                font-weight: bold;
+            }
     }
 }
 
