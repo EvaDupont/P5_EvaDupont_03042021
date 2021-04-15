@@ -1,21 +1,21 @@
 /*bouton mettre dans le panier */
-.btn-paw, .btn-check, .btn-suppr
+.btn-paw, .btn-check, .btn-suppr, .btn-basket, .btn-shopping
 {
     padding: 5px;
 }
 
-.btn-panier
+#ajout_panier
 {
     background-color: $background-color;
+    color: $text-color;
     border-radius: 20px;
     padding: 10px;
     border: none;
     outline-style: none;
-    width: 200px;
+    width: 230px;
     height: 60px;
     border: solid 5px $darken-background;
     margin: auto;
-    margin-bottom: 50px;
     a
     {
         text-decoration: none;
@@ -29,19 +29,7 @@
     }
 }
 
-.btn-panier:active
-{
-    background-color: $darken-background;
-    box-shadow: 5px 5px 5px $box-shadow;
-    border: none;
-    transform: scale(0.9);
-    outline-style: none;
-    border: solid 5px $background-color;
-}
-
-/* bouton poursuivre mes achats */
-
-.btn-continueAchat
+.btn-continueAchat, .btn-voirPanier
 {
     background-color: $background-color;
     border-radius: 20px;
@@ -49,36 +37,51 @@
     border: none;
     outline-style: none;
     margin :auto;
-    width: 220px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 230px;
     border: solid 5px $darken-background;
     a
     {
         text-decoration: none;
-        cursor: pointer;
         color: $text-color;
-            &:hover
+        &:hover
             {
                 color: $text-color;
                 font-weight: bold;
+                text-decoration: none;
             }
     }
 }
 
-.btn-continueAchat:active
+#ajout_panier:active, 
+#ajout_panier:hover, 
+.btn-voirPanier:active, 
+.btn-voirPanier:hover,
+.btn-continueAchat:active, 
+.btn-continueAchat:hover, 
+.btn-commande:active, 
+.btn-commande:hover
 {
-    background-color: $background-color;
+    cursor: pointer;
+    background-color: $darken-background;
     box-shadow: 5px 5px 5px $box-shadow;
     border: none;
     transform: scale(0.9);
     outline-style: none;
-    border: solid 5px $darken-background;
+    border: solid 5px $background-color;
+    text-decoration: none;
+    color: $text-color;
+    font-weight: bold;
 }
+
 
 /* bouton commander */
 
 .btn-commande
 {
     background-color: $background-color;
+    color: $text-color;
     border-radius: 20px;
     padding: 5px;
     border: none;
@@ -88,29 +91,16 @@
     border: solid 5px $darken-background;
     margin :auto;
     margin-top: 30px;
+    margin-bottom: 30px;
     display: block;
     a
     {
         text-decoration: none;
         cursor: pointer;
         color: $text-color;
-            &:hover
-            {
-                color: $text-color;
-                font-weight: bold;
-            }
     }
 }
 
-.btn-commande:active
-{
-    background-color: $darken-background;
-    box-shadow: 5px 5px 5px $box-shadow;
-    border: none;
-    transform: scale(0.9);
-    outline-style: none;
-    border: solid 5px $background-color;
-}
 
 /* bouton supprimer */
 

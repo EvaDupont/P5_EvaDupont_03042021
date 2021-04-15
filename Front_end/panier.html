@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css"> 
-        <script type ="text/javascript" src="app.js"></script> 
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/d461de9a6d.js" crossorigin="anonymous"></script> <!-- lien FA si besoin-->
         <meta name= "viewport" content="width=device-width, initial-scale=1.0"> <!-- balise pour controler la mise en page mobile -->
@@ -38,31 +37,19 @@
         </header>
 
         <main>
-            <div class="col">
-                <div class="card-panier">
-                    <div class="card-body">
-                       <h5 class="card-title">Mon panier</h5>
-                       <p class="card-text">description </p>
-                       <div class="btn-supprimer"><i class="fas fa-times btn-suppr"></i> Supprimer</div>
-                    </div>
-
-                    <!-- OU -->
-                    <form>
-                        <label for="panier"> Mon panier :</label>
-                        <textarea id="panier" name="panier"></textarea> <!-- revoir les id si version conservée-->
-                        <input type="reset" value="Supprimer" class="btn-supprimer">
-                    </form>
+            <section>
+                <h1 class="title-panier"> Mon panier </h1>
+                <div id="panier-recap"> 
+                    <p id ="panierVide">Mon panier est vide</p>
                 </div>
-            </div>
-
-            <div id="price-final">Montant total de votre panier :</div>
+            </section>
 
             <div class="btn-continueAchat"><a href="index.html"><i class="fas fa-shopping-cart"></i> Continuer mes achats </a></div>
 
             <div class="col">
-                <div class="card-panier">
-                    <div class="card-body">
-                       <h5 class="card-title">Informations personnelles</h5>
+                <div class="form-panier">
+                    <div>
+                       <h5 class="title-form">Valider ma commande </h5>
 
                        <form>
                         <div>
@@ -108,16 +95,15 @@
         </footer>
 
 
-        <script type ="text/javascript" src="panier.js"></script>
+        <script  src="app.js"></script>
 
         <script>
-          panierCreation();
+                panierCreation();
         </script>
+
         <script>
-          confirmCommande();
+                confirmCommande();
         </script>
-
-
 
     </body>
 

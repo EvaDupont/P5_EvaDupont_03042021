@@ -5,23 +5,6 @@ body, main
     padding: 0;
 }
 
-.liste_produit a
-{
-    text-decoration:none;
-    color: $text-color;
-    border : solid 4px $darken-background;
-    background-color: $background-color;
-    border-radius: 10px;
-    padding: 10px;
-    width : 200px;
-    margin-left: 5px;
-    &:hover
-    {
-        color: $text-color;
-        font-weight: bold;
-    }
-}
-
 .main-title /* Titre pcpal de la page index*/
 {
     font-size: 2em;
@@ -34,18 +17,3 @@ body, main
     margin-left: 20px;
 }
 
-
-#price-final /*dans les pages produits + panier : calcul du panier total */
-{
-   font-weight: bold;
-   color: $text-color;
-   text-decoration: underline;
-   border : none;
-   text-align: center;
-   margin-top: 30px;
-   margin-bottom: 30px;
-   &:focus
-   {
-       outline-style: none;
-   }
-}

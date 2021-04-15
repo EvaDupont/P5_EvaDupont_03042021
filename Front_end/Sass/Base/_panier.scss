@@ -1,0 +1,83 @@
+.title-panier
+{
+    font-size: 2em;
+    text-align: left;
+    font-weight: bold;
+    color: $text-color;
+    padding : 20px;
+    margin-right: 20px;
+    margin-left: 20px;  
+}
+
+.title-form
+{
+    font-size: 2em;
+    text-align: left;
+    font-weight: bold;
+    color: $text-color;
+    padding : 20px;
+ 
+}
+
+#panierVide
+{
+    text-align: center;
+    color: $darken-background;
+    font-size: 1.3em;
+    margin-bottom: 50px;
+}
+
+.circle
+{
+    color: $text-color;
+    &:hover
+    {
+        color: $darken-textcolor;
+        transform: scale(0.8);
+        transition: transform 500ms ease-out 50ms;
+    }
+}
+
+table
+{
+    margin: auto;
+}
+
+tr, td, th
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+#colonneTotal, #sommeTotal /* panier : calcul du panier total */
+{
+   font-weight: bold;
+   color: $text;
+   text-decoration: underline;
+   text-align: center;
+   padding-top: 30px;
+   margin-bottom: 30px;
+   &:focus
+   {
+       outline-style: none;
+   }
+}
+
+@media screen and (max-width : 767px)
+{
+    table
+{
+    margin: auto;
+    border : solid 3px $background-color;
+    width : 600px;
+}
+
+tr, td, th
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1em;
+}
+}

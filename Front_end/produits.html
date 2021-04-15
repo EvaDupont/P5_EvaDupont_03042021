@@ -45,9 +45,13 @@
                         </select> 
                 </div>
             </section>
-
+                
             <section class="panier">
-                <div class="btn-panier"><a href="panier.html"><i class="fas fa-paw fa-lg btn-paw"></i> Ajouter au panier</a></div>
+        
+                <div id="ajout_panier"><i class="fas fa-paw fa-lg btn-paw"></i>Ajouter au panier</div>
+                <div class="btn-voirPanier"><a href="panier.html"><i class="fas fa-shopping-basket btn-basket"></i> Voir mon panier </a></div>
+                <div class="btn-continueAchat"><a href="index.html"><i class="fas fa-shopping-cart btn-shopping"></i> Continuer mes achats </a></div>
+                
             </section>
 
         </main>
@@ -60,16 +64,20 @@
                 </ul>
         </footer>
 
-        <script type ="text/javascript" src="app.js"></script>
+        <script src="app.js"></script>
+        
         <script>
-            detailTeddies();
+                detailTeddies();
         </script>
-       <!-- <script>
-            ajoutPanier();
-        </script>
+       
         <script>
-            nombreProduitPanier();
-        </script>-->
+                ajoutPanier();
+        </script>
+        
+        <script>
+                nombreProduitPanier();
+        </script>
+
     </body>
 </html>
  

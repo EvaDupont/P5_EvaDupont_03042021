@@ -28,15 +28,16 @@
     text-decoration: none;
     padding-right: 15px;
     padding-top: 20px;
+    color: $text-color;
     }
     a
     {
     text-decoration: none;
     cursor: pointer;
-    color: black;
+    color:$text-color;
         &:hover
         {
-            color: $text-color;
+            font-weight: bold;
         }
     }
 }
@@ -46,10 +47,11 @@
         display: none;
     }
 
-.user, .basket
-{
-    padding-right: 10px;
-}
+    .user, .basket
+    {
+        padding-right: 10px;
+        color: $text-color;
+    }
 
 
 @media screen and (max-width : 767px)
