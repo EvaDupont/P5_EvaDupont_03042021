@@ -485,11 +485,6 @@ confirmRecap = () => {
   ligneConfirm.appendChild(confirmNom);
   ligneConfirm.appendChild(confirmPrixUnitaire);
 
-  /*contenu des entetes*/
-  confirmPhoto.textContent = "Article";
-  confirmNom.textContent = "Nom";
-  confirmPrixUnitaire.textContent = "Prix";
-
   /*Incrémentation de l'id des lignes pour chaque produit*/
   let i = 0;
   let order = JSON.parse(sessionStorage.getItem("order"));

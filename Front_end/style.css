@@ -15,6 +15,11 @@ body, main {
   margin-left: 20px;
 }
 
+p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 input:valid, textarea:valid {
   border: solid 3px #12c412;
 }
@@ -26,7 +31,6 @@ input:valid, textarea:valid {
   text-align: center;
   color: rgba(153, 103, 10, 0.979);
   padding-top: 50px;
-  padding-bottom: 50px;
   margin-right: 20px;
   margin-left: 20px;
 }
