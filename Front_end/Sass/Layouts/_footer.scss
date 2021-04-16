@@ -15,6 +15,8 @@ footer
             cursor: pointer;
             color: black;
                 &:hover{
+                    font-weight: bold;
+                    text-decoration: none;
                     color: $text-color;
                 }
         }

@@ -5,7 +5,7 @@ body, main
     padding: 0;
 }
 
-.main-title /* Titre pcpal de la page index*/
+.main-title, .title-confirm 
 {
     font-size: 2em;
     font-style: italic;
@@ -17,3 +17,20 @@ body, main
     margin-left: 20px;
 }
 
+input:valid, textarea:valid
+{
+    border: solid 3px rgb(18, 196, 18);
+}
+
+.recap-final
+{
+    font-size: 1.2em;
+    font-style: italic;
+    text-decoration: underline;
+    text-align: center;
+    color: $text-color;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-right: 20px;
+    margin-left: 20px;
+}

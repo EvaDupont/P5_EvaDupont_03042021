@@ -9,14 +9,16 @@
         <meta name= "viewport" content="width=device-width, initial-scale=1.0"> <!-- balise pour controler la mise en page mobile -->
         <meta name= "description" content=" Bienvenue chez Orinoco : vous trouverez ici les meilleures références d'ours en peluche faits à la maison."> <!-- balise pour l'indexation dans les moteurs de recherche -->
         <link rel="icon" type="image/png" href="images/logo.png" />
-        <title> Orinoco : le spécialiste des ours en peluche faits à la main </title>
+        <title> Confirmation de votre commande </title>
     </head>
 
     <body>
         <header>
             <div class="container-header">
                 <div class="logo">
+                    <a href="index.html">
                     <img class="logo-orinoco" src="images/logo.png" alt="logo">
+                    </a>
                 </div>
 
                 <nav>
@@ -36,29 +38,45 @@
         </header>
 
         <main>
-            <section>
-                <h1 class= "main-title"> Découvrez et choisissez vos ours en peluche faits à la main </h1> 
+            <section class="recap">
+                <h1 class="title-confirm"> Votre commande a bien été prise en compte. </h1>
+
+                <p class="textConfirm"> Bonjour <span id="firstName"></span>,</p>
+
+                <p class="textConfirm">
+                  Nous vous remercions pour votre commande n°
+                </p>
+
+                <p id="orderId"></p>
+
+                <p class="textConfirm">
+                  Nous vous informerons par email de son expédition et vous transmettrons son numéro de suivi.
+                </p>
+
+                <p class="textConfirm">Merci pour votre confiance et à bientôt chez <a href="index.html">Orinoco.</a></p>
+
             </section>
 
-            <section class="liste_produit" id="listeProduit">
-            </section>
+            <section class="recapitulatif">
 
+                <h2 class="recap-final"> Recapitulatif de votre commande </h2>
+
+                <div id="confirmation-recap"></div>
+
+            </section>
         </main>
 
-        <footer >
-                <ul> 
-                    <li> <a href = "#" ></a><i class="fas fa-landmark landmark"></i> Mentions légales </li>
-                    <li> <a href = "#" ></a><i class="fas fa-user-lock lock"></i> Protection des données personnelles</li>
-                    <li> <a href = "mailto:hello-orinoco@gmail.com"><i class="fas fa-at at"></i> Restons en contact </a></li> <!--faire lien vers BM ou RS -->
-                </ul>
-        </footer>
-
-        <script src="app.js"></script> 
+        <script src="app.js"></script>
         
-        <script> 
-                loadTeddies();  /* appeler la fonction */
+        <script>
+            confirmRecap();
         </script>
-    
-    </body>
-</html>
- 
+        
+        <script>
+            retourOrder();
+        </script>
+
+
+        </body>
+
+        </html>

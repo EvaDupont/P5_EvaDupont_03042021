@@ -4,9 +4,25 @@ body, main {
   padding: 0;
 }
 
-.main-title {
+.main-title, .title-confirm {
   font-size: 2em;
   font-style: italic;
+  text-align: center;
+  color: rgba(153, 103, 10, 0.979);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+input:valid, textarea:valid {
+  border: solid 3px #12c412;
+}
+
+.recap-final {
+  font-size: 1.2em;
+  font-style: italic;
+  text-decoration: underline;
   text-align: center;
   color: rgba(153, 103, 10, 0.979);
   padding-top: 50px;
@@ -215,60 +231,23 @@ img {
   color: rgba(153, 103, 10, 0.979);
 }
 
-/* bouton supprimer */
-.btn-supprimer {
-  background-color: rgba(153, 103, 10, 0.979);
-  border-radius: 20px;
-  border: none;
-  outline-style: none;
-  padding: 5px;
-  width: 130px;
-  height: 45px;
-  border: solid 5px rgba(105, 71, 7, 0.979);
-  margin: auto;
-  display: block;
-  color: cornsilk;
-  cursor: pointer;
-}
-
-.btn-supprimer a {
-  text-decoration: none;
-  cursor: pointer;
-  color: rgba(153, 103, 10, 0.979);
-}
-
-.btn-supprimer a:hover {
-  color: rgba(153, 103, 10, 0.979);
-  font-weight: bold;
-}
-
-.btn-supprimer:active {
-  background-color: rgba(105, 71, 7, 0.979);
-  -webkit-box-shadow: 5px 5px 5px #dcc9dc;
-          box-shadow: 5px 5px 5px #dcc9dc;
-  border: none;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-  outline-style: none;
-  border: solid 5px rgba(153, 103, 10, 0.979);
-}
-
 .title-panier {
-  font-size: 2em;
+  font-size: 1.6em;
   text-align: left;
   font-weight: bold;
   color: rgba(153, 103, 10, 0.979);
   padding: 20px;
-  margin-right: 20px;
+  margin-top: 30px;
   margin-left: 20px;
 }
 
 .title-form {
-  font-size: 2em;
+  font-size: 1.6em;
   text-align: left;
   font-weight: bold;
   color: rgba(153, 103, 10, 0.979);
   padding: 20px;
+  margin-left: 20px;
 }
 
 #panierVide {
@@ -293,19 +272,28 @@ img {
 }
 
 table {
-  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 tr, td, th {
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 0.9em;
+  padding: 10px;
+  font-size: 1em;
   font-weight: bold;
 }
 
 #colonneTotal, #sommeTotal {
   font-weight: bold;
   color: black;
+  font-size: 1em;
   text-decoration: underline;
   text-align: center;
   padding-top: 30px;
@@ -316,17 +304,41 @@ tr, td, th {
   outline-style: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 767px) {
   table {
-    margin: auto;
-    border: solid 3px #f0e8f0;
-    width: 600px;
+    display: block;
+    margin-left: 150px;
   }
-  tr, td, th {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 1em;
+}
+
+@media screen and (min-width: 1023px) {
+  .title-panier, .title-form {
+    font-size: 2em;
   }
+  table {
+    margin-left: 250px;
+  }
+  tr, td, th, #colonneTotal, #sommeTotal {
+    padding: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  table {
+    margin-left: 450px;
+  }
+}
+
+@media screen and (min-width: 2559px) {
+  table {
+    margin-left: 900px;
+  }
+}
+
+.recap {
+  text-align: center;
 }
 
 .container-header {
@@ -372,6 +384,8 @@ tr, td, th {
 
 .navigation a:hover {
   font-weight: bold;
+  text-decoration: none;
+  color: rgba(153, 103, 10, 0.979);
 }
 
 .nav-mobile {
@@ -437,6 +451,8 @@ footer ul a {
 }
 
 footer ul a:hover {
+  font-weight: bold;
+  text-decoration: none;
   color: rgba(153, 103, 10, 0.979);
 }
 
