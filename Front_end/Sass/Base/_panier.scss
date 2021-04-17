@@ -81,22 +81,11 @@ tr, td, th
 
 @media screen and (min-width : 1023px)
 {
-    .title-panier, .title-form
-    {
-        font-size: 2em;
-    }
-
     table
     {
         margin-left: 250px;
     }
 
-    tr, td, th, #colonneTotal, #sommeTotal
-    {
-    padding : 10px;
-    font-size: 1.3em;
-    font-weight: bold;
-    }
 }
 
 @media screen and (min-width : 1439px)

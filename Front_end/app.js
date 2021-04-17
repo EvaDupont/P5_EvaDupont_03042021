@@ -8,16 +8,18 @@ getAllTeddies = () => {
         this.readyState == XMLHttpRequest.DONE && 
         this.status >= 200 &&
         this.status < 400
-      ) {
-        resolve(JSON.parse(this.responseText)); /*analyse une chaine JSON pour la traduire en JS */
-      } else {
+      )
+      {
+        resolve(JSON.parse(this.responseText));
+        /*analyse une chaine JSON pour la traduire en JS */
+      } 
+      else {
       } /* vérification de l'état de la requete : selon les codes serveur : 200 tt est ok 400 erreur, sinon c'est qu'il y aun problèmeS*/
     };
     request.open("GET", "http://localhost:3000/api/teddies/" + idOursons); /* lien vers l'API des teddies  = Id des produits*/
     request.send(); /* requete envoyée */
   });
-}; (console.log(getAllTeddies))
-
+}; 
 
 /**************** PAGE INDEX LISTE DES TEDDIES ********************************/
 
@@ -34,7 +36,7 @@ async function loadTeddies() {
 
   /* création des cartes produit dans l'index HTML */
 
-  teddies.forEach((teddy) => { /* creation de vériable pour creer la structure sous le fichier html */
+  teddies.forEach((teddy) => { /* creation de variables pour creer la structure sous le fichier html */
     let produitContenant = document.createElement("section");
     let produitIllustration = document.createElement("div");
     let produitElement = document.createElement("div");
@@ -156,9 +158,10 @@ if (localStorage.getItem("panier")) {
   localStorage.setItem("panier", JSON.stringify(panierInit));
 }
 
-/* Ajout de l'article au panier de l'utilisateur */
+/* Ajout de l'article au panier de l'utilisateur 
+=> CALLBACK : fonction rappelée a chaque fois que l'utilisateur clique sur le bouton*/
 
-ajoutPanier = () => {
+let ajoutPanier = () => {
   let acheter = document.getElementById("ajout_panier");
   acheter.addEventListener("click", async function () {
     const ajout = await getAllTeddies();
@@ -166,14 +169,13 @@ ajoutPanier = () => {
     localStorage.setItem("panier", JSON.stringify(panier));
     console.log("Le produit a été ajouté au panier");
     alert("Cet article a été ajouté dans votre panier");
-    location.reload();
   });
 };
 
 /************** PAGE PANIER **************/
 
 /*Vérification du panier*/
-checkPanier = () => {
+let checkPanier = () => {
   /*Vérifier qu'il y ait au moins un produit dans le panier*/
   let etatPanier = JSON.parse(localStorage.getItem("panier"));
   /*Si le panier est vide ou null*/
@@ -188,7 +190,7 @@ checkPanier = () => {
 
 /*création du tableau panier */
 
-panierCreation = () => {
+let panierCreation = () => {
   if (panier.length > 0) {
     document.getElementById("panierVide").remove();
 
@@ -203,10 +205,10 @@ panierCreation = () => {
     let ligneTotal = document.createElement("tr");
     let colonneTotal = document.createElement("th");
     let recapPrixPaye = document.createElement("td");
+    let recapPanier = document.getElementById("panier-recap");
 
     /* Placement de la structure dans la page */
 
-    let recapPanier = document.getElementById("panier-recap");
     recapPanier.appendChild(recap);
     recap.appendChild(ligneTableau);
     ligneTableau.appendChild(recapPhoto);
@@ -238,7 +240,7 @@ panierCreation = () => {
 
       console.log(i);
 
-      /* Supprimer un produit du panier */ 
+      /* Supprimer un produit du panier => CALLBACK */ 
       
       removeArticle.addEventListener("click", (event) => {this.annulerArticle(i);})
 
@@ -268,9 +270,8 @@ panierCreation = () => {
     ligneTotal.appendChild(recapPrixPaye);
 
     recapPrixPaye.setAttribute("id", "sommeTotal");
-    recapPrixPaye.setAttribute("colspan", "4");
     colonneTotal.setAttribute("id", "colonneTotal");
-    colonneTotal.setAttribute("colspan", "2");
+   
 
     /* Calcul de l'addition total */
 
@@ -285,13 +286,10 @@ panierCreation = () => {
   }
 };
 
-
-
-
 /* supprimer un produit */
 
-annulerArticle = (i) => {
-  panier.splice(i, 1);
+var annulerArticle = (i) => {
+  panier.splice(i, 1); /*splice pour supprimer ou ajouter des élements d'une ligne d'un tableau */
   localStorage.clear();
   /* Mise à jour du nouveau panier avec suppression de l'article */
   localStorage.setItem("panier", JSON.stringify(panier));
@@ -303,7 +301,8 @@ annulerArticle = (i) => {
 
 /* => vérifie les inputs du formulaire */
 
-checkInput = () => {
+let checkInput = () => {
+
   /* Controle des données clients par la regex (ou expression régulière) : permet de vérifier la qualité des informations envoyées. */
   let checkNumber = /[0-9]/;
   let checkMail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -313,7 +312,6 @@ checkInput = () => {
   let checkMessage = "";
 
   /* Récupération des inputs */
-
   let prenom = document.getElementById("firstName").value;
   let nom = document.getElementById("lastName").value;
   let adresse = document.getElementById("address").value;
@@ -413,7 +411,8 @@ const envoiFormulaire = (sendForm, url) => {
   });
 };
 
-confirmCommande = () => {
+/*CALLBACK */
+let confirmCommande = () => {
   let commander = document.getElementById("form_1");
   commander.addEventListener("submit", (event) => {
     event.preventDefault()
@@ -447,7 +446,7 @@ confirmCommande = () => {
 };
 
 /*Récupération des informations pour affichage sur la page de confirmation*/
-retourOrder = () => {
+let retourOrder = () => {
   if (sessionStorage.getItem("order") != null) {
     let order = JSON.parse(sessionStorage.getItem("order"));
     document.getElementById("firstName").innerHTML = order.contact.firstName;
@@ -465,7 +464,7 @@ retourOrder = () => {
 
 /*Tableau de recap de la commande dans la page de confirmation*/
 
-confirmRecap = () => {
+let confirmRecap = () => {
 
   /*Création de la structure du tableau récapitulatif*/
   let recapConfirm = document.createElement("table");
