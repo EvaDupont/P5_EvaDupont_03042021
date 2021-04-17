@@ -457,7 +457,7 @@ let retourOrder = () => {
 
   /*Redirection vers l'accueil*/
   else {
-    alert("Merci pour vote commande. A bientôt");
+    alert("Merci pour votre commande. A bientôt");
     window.location = "./index.html";
   }
 };
