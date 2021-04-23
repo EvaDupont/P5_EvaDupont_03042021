@@ -9,16 +9,6 @@
     margin-left: 20px;  
 }
 
-.title-form
-{
-    font-size: 1.6em;
-    text-align: left;
-    font-weight: bold;
-    color: $text-color;
-    padding : 20px;
-    margin-left: 20px;
-}
-
 #panierVide
 {
     text-align: center;
@@ -66,8 +56,6 @@ tr, td, th
        outline-style: none;
    }
 }
-
-
 
 
 @media screen and (min-width : 767px)

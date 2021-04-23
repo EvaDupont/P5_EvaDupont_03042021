@@ -20,10 +20,6 @@ p {
   margin-right: 10px;
 }
 
-input:valid, textarea:valid {
-  border: solid 3px #12c412;
-}
-
 .recap-final {
   font-size: 1.2em;
   font-style: italic;
@@ -32,6 +28,15 @@ input:valid, textarea:valid {
   color: rgba(153, 103, 10, 0.979);
   padding-top: 50px;
   margin-right: 20px;
+  margin-left: 20px;
+}
+
+.title-form {
+  font-size: 1.6em;
+  text-align: left;
+  font-weight: bold;
+  color: rgba(153, 103, 10, 0.979);
+  padding: 20px;
   margin-left: 20px;
 }
 
@@ -242,15 +247,6 @@ img {
   color: rgba(153, 103, 10, 0.979);
   padding: 20px;
   margin-top: 30px;
-  margin-left: 20px;
-}
-
-.title-form {
-  font-size: 1.6em;
-  text-align: left;
-  font-weight: bold;
-  color: rgba(153, 103, 10, 0.979);
-  padding: 20px;
   margin-left: 20px;
 }
 

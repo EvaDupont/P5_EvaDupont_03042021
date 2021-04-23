@@ -23,7 +23,7 @@ getAllTeddies = () => {
 
 /**************** PAGE INDEX LISTE DES TEDDIES ********************************/
 
-async function loadTeddies() {
+async function loadTeddies() { /*les données sont récupérées*/
   const teddies = await getAllTeddies(); 
   /* on affecte le résultat de la fonction getAllTeddies à la const teddies. 
   on attend que getAllTeddies soit terminée avt de continuer l'excécution de LoadTeddies (= promise) 
@@ -32,7 +32,7 @@ async function loadTeddies() {
   /* Lien avec la page index HTML */
 
   let listeProduit = document.getElementById("listeProduit"); /* variable pour emmener les éléments de l'API vers l'index.html */
-  console.log(loadTeddies)
+  console.log(teddies)
 
   /* création des cartes produit dans l'index HTML */
 
@@ -46,7 +46,7 @@ async function loadTeddies() {
     let produitPrix = document.createElement("p");
     let produitBtn = document.createElement("a");
 
-    /*Ajout des attributs au balise index HTML */
+    /*Ajout des attributs au balise index HTML pour les travailler ac sass */
 
     produitContenant.setAttribute("class", "produit_card");
     produitIllustration.setAttribute("class", "produit_illustration");
@@ -113,7 +113,6 @@ async function detailTeddies() {
   detailElement.setAttribute("class", "detail_element");
   detailNom.setAttribute("class", "detail_nom");
   detailDescription.setAttribute("class", "detail_description");
-  //detailInformationPrix.setAttribute("class", "detail_information_prix");
   detailPrix.setAttribute("class", "detail_prix");
 
   /* Agencement des éléments produit HTML */
@@ -153,7 +152,7 @@ let panier = JSON.parse(localStorage.getItem("panier"));
 if (localStorage.getItem("panier")) {
   console.log(panier);
 } else {
-  console.log("Le panier va être initalisé");
+  console.log("Le panier va être initialisé");
   let panierInit = [];
   localStorage.setItem("panier", JSON.stringify(panierInit));
 }
@@ -238,8 +237,6 @@ let panierCreation = () => {
       removeArticle.setAttribute("id", "remove" + [i]);
       removeArticle.setAttribute("class", "fas fa-times-circle fa-2x circle");
 
-      console.log(i);
-
       /* Supprimer un produit du panier => CALLBACK */ 
       
       removeArticle.addEventListener("click", (event) => {this.annulerArticle(i);})
@@ -281,7 +278,6 @@ let panierCreation = () => {
     });
 
     /* Affichage du prix total à payer dans l'addition */
-    console.log(sommeTotal);
     document.getElementById("sommeTotal").textContent = sommeTotal + " €";
   }
 };
@@ -362,7 +358,7 @@ let checkInput = () => {
   
   /*Test du mail*/
   if (checkMail.test(email) == false) {
-    checkMessage = checkMessage + "\n" + "Veuillez vérifier les informations concernant votre email. Les caractères spéciaux ne sont pas autorisés";
+    checkMessage = checkMessage + "\n" + "Veuillez vérifier les informations concernant votre email.";
   } else {
     console.log("Adresse mail acceptée");
   }
